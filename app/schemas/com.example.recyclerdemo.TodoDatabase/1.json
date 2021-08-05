@@ -1,0 +1,51 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "1ce9a486c45d2c53eed86fa9fe07790c",
+    "entities": [
+      {
+        "tableName": "TodoNotes_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`Todo_primaryID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Todo_descrption` TEXT, `Todo_isCompleted` INTEGER NOT NULL, `Todo_RemainderTime` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "primaryID",
+            "columnName": "Todo_primaryID",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notesDescription",
+            "columnName": "Todo_descrption",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isCompleted",
+            "columnName": "Todo_isCompleted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "remainderTime",
+            "columnName": "Todo_RemainderTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "Todo_primaryID"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"1ce9a486c45d2c53eed86fa9fe07790c\")"
+    ]
+  }
+}

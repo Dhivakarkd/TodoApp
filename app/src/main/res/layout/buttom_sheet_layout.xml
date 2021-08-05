@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@drawable/bottom_sheet_backgroud"
+    android:orientation="vertical"
+
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <EditText
+        android:id="@+id/edit_TaskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/description_hint"
+        android:inputType="textMultiLine"
+        android:textSize="20sp">
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Remainder_chip"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/set_a_remainder"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:chipBackgroundColor="@color/primaryColor"
+                app:chipIcon="@drawable/ic_access_alarm_black_24dp"
+                app:chipIconVisible="true"
+                app:closeIcon="@drawable/chip_close"
+                app:closeIconEnabled="true">
+
+            </com.google.android.material.chip.Chip>
+
+            <!--            <Button-->
+            <!--                android:id="@+id/Remainder_button"-->
+
+            <!--                style="@style/Widget.MaterialComponents.Button.Icon"-->
+            <!--                android:layout_width="wrap_content"-->
+
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/edit_TaskDescription"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:layout_marginLeft="15dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:drawableStart="@drawable/ic_access_alarm_black_24dp"-->
+
+            <!--                android:drawableLeft="@drawable/ic_access_alarm_black_24dp"-->
+
+
+            <!--                android:text="@string/remainder_text"-->
+            <!--                android:textColor="#FDF9F9"-->
+            <!--                android:textColorHighlight="#633535"-->
+            <!--                android:textSize="15sp" />-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <Button
+                android:id="@+id/done_Button"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_marginBottom="10dp"
+                android:drawableStart="@drawable/ic_done_black_24dp"
+                android:drawableLeft="@drawable/ic_done_black_24dp"
+                android:enabled="false"
+                android:text=" Done"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
+

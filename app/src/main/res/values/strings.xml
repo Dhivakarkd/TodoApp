@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">To Do List</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_hint">Enter Task Description</string>
+    <string name="remainder_text">Set a Remainder</string>
+    <string name="empty_view_text">No Task to Show</string>
+    <string name="set_a_remainder">Set a Remainder</string>
+    <string name="remainder_tomorrow">Tomorrow</string>
+    <string name="remainder_today">Today</string>
+</resources>
